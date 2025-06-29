@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NICOBAR - Home</title>
+    <link rel="stylesheet" href="nicobar-homepage.css">
+</head>
+<body>
+    <!-- Main Homepage Content -->
+    <div class="homepage-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <div class="shipping-notice">WORLDWIDE SHIPPING AVAILABLE</div>
+            </div>
+            <nav class="main-nav">
+                <div class="nav-left">
+                    <button class="menu-toggle">☰</button>
+                </div>
+                <div class="nav-center">
+                    <div class="logo">NICOBAR</div>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="nav-link">HOME</a>
+                    <a href="#" class="nav-link">WOMEN</a>
+                    <a href="#" class="nav-link">MEN</a>
+                    <a href="#" class="nav-link">GIFTING</a>
+                </div>
+                <div class="nav-right">
+                    <button class="nav-icon">🔍</button>
+                    <button class="nav-icon">👤</button>
+                    <button class="nav-icon">🛍️</button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="hero-section">
+                <div class="hero-image-container">
+                    <!-- This will be styled with the background image -->
+                </div>
+                <div class="gift-shop-badge">
+                    <div class="badge-content">
+                        <span class="badge-text">THE GIFT SHOP</span>
+                        <div class="badge-icon">🎁</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- WhatsApp Button -->
+        <div class="whatsapp-button">
+            <button class="whatsapp-btn">💬</button>
+        </div>
+    </div>
+
+    <!-- Exit Intent Popup -->
+    <div id="exit-intent-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close">&times;</button>
+            
+            <!-- Progress Indicators -->
+            <div class="popup-progress">
+                <div class="progress-dot active" data-step="0"></div>
+                <div class="progress-dot" data-step="1"></div>
+                <div class="progress-dot" data-step="2"></div>
+                <div class="progress-dot" data-step="3"></div>
+            </div>
+
+            <!-- Pages Slider -->
+            <div class="popup-slider" id="popup-slider">
+                <!-- Page 1: Exit Reason -->
+                <div class="popup-page active" data-page="0">
+                    <div class="popup-header">
+                        <h2>Hey, what made you think about leaving? 🤔</h2>
+                        <p>No judgment here - we just want to understand!</p>
+                    </div>
+                    <div class="feedback-options">
+                        <button class="feedback-btn" data-question="exit_reason" data-answer="price">Prices feel too high</button>
+                        <button class="feedback-btn" data-question="exit_reason" data-answer="not_found">Couldn't find what I was looking for</button>
+                        <button class="feedback-btn" data-question="exit_reason" data-answer="just_browsing">Just browsing, not buying today</button>
+                        <button class="feedback-btn" data-question="exit_reason" data-answer="confusing">Site feels confusing</button>
+                        <button class="feedback-btn" data-question="exit_reason" data-answer="other">Something else</button>
+                    </div>
+                    <div class="popup-actions">
+                        <button class="stay-btn">Actually, let me keep browsing!</button>
+                        <button class="next-btn" disabled>Next →</button>
+                    </div>
+                </div>
+
+                <!-- Page 2: Purchase Intent -->
+                <div class="popup-page" data-page="1">
+                    <div class="popup-header">
+                        <h2>How close were you to buying something? 🛍️</h2>
+                    </div>
+                    <div class="feedback-options">
+                        <button class="feedback-btn" data-question="purchase_intent" data-answer="ready">I was ready to buy</button>
+                        <button class="feedback-btn" data-question="purchase_intent" data-answer="considering">Still considering</button>
+                        <button class="feedback-btn" data-question="purchase_intent" data-answer="early">Just starting to look</button>
+                        <button class="feedback-btn" data-question="purchase_intent" data-answer="not_today">Not shopping today</button>
+                    </div>
+                    <div class="popup-actions">
+                        <button class="prev-btn">← Back</button>
+                        <button class="next-btn" disabled>Next →</button>
+                    </div>
+                </div>
+
+                <!-- Page 3: What Would Bring Back -->
+                <div class="popup-page" data-page="2">
+                    <div class="popup-header">
+                        <h2>What would bring you back to complete a purchase? 💭</h2>
+                    </div>
+                    <div class="feedback-options">
+                        <button class="feedback-btn" data-question="bring_back" data-answer="discount">A discount or special offer</button>
+                        <button class="feedback-btn" data-question="bring_back" data-answer="better_selection">More product options</button>
+                        <button class="feedback-btn" data-question="bring_back" data-answer="easier_browse">Easier browsing experience</button>
+                        <button class="feedback-btn" data-question="bring_back" data-answer="time">Just need more time to think</button>
+                        <button class="feedback-btn" data-question="bring_back" data-answer="reviews">More customer reviews</button>
+                    </div>
+                    <div class="popup-actions">
+                        <button class="prev-btn">← Back</button>
+                        <button class="next-btn" disabled>Next →</button>
+                    </div>
+                </div>
+
+                <!-- Page 4: Final -->
+                <div class="popup-page" data-page="3">
+                    <div class="popup-header">
+                        <h2>Before you go... 💙</h2>
+                    </div>
+                    <div class="feedback-section">
+                        <h3>Anything specific that stopped you today?</h3>
+                        <textarea id="open-feedback" placeholder="Tell us what we missed... (totally optional!)"></textarea>
+                    </div>
+                    <div class="email-section">
+                        <h3>Want us to send you something special? ✨</h3>
+                        <p>We can curate pieces just for you and maybe throw in a little surprise!</p>
+                        <input type="email" id="user-email" placeholder="your@email.com (optional)">
+                    </div>
+                    <div class="popup-actions">
+                        <button class="prev-btn">← Back</button>
+                        <button class="feedback-btn-submit">Thanks for helping us! 💙</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="nicobar-homepage.js"></script>
+</body>
+</html> 

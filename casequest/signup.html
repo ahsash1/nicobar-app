@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="todo.html">To-Do List</a></li>
+            <li><a href="visualization.html">Visualization</a></li>
+            <li><a href="income_expenses.html">Income/Expenses</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="image-section">
+            <img src="https://static.vecteezy.com/system/resources/previews/014/011/418/original/financial-management-concept-and-investment-flat-design-of-payment-and-finance-with-money-cash-banknote-calculator-and-credit-card-illustration-and-banner-template-free-png.png" alt="Finance Image">
+            <h1>FinSmart</h1>
+        </div>
+        <div class="form-section">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>If already registered, <a href="login.html">go to login</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Store user data in localStorage
+            const userData = {
+                username: username,
+                email: email,
+                password: password // In a real app, this would be hashed
+            };
+            
+            localStorage.setItem('currentUser', JSON.stringify(userData));
+            localStorage.setItem('isLoggedIn', 'true');
+            
+            alert('Account created successfully!');
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html> 

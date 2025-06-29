@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income and Expenses</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="income_expenses.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="todo.html">To-Do List</a></li>
+            <li><a href="visualization.html">Visualization</a></li>
+            <li><a href="income_expenses.html">Income/Expenses</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Income and Expenses</h2>
+        
+        <div class="finance-simple-section">
+            <h3>Income</h3>
+            <div class="finance-simple-content">
+                <form id="income-form" class="finance-simple-form">
+                    <select id="income-type">
+                        <option value="salary">Salary</option>
+                        <option value="freelance">Freelance</option>
+                        <option value="investment">Investment Returns</option>
+                        <option value="business">Business</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="number" id="income-amount" placeholder="Amount" required min="0" step="0.01">
+                    <button type="submit">Done</button>
+                </form>
+                <div class="chart-simple" id="income-pie-chart">
+                    <p>Pie chart for income</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="finance-simple-section">
+            <h3>Expenses</h3>
+            <div class="finance-simple-content">
+                <form id="expense-form" class="finance-simple-form">
+                    <select id="expense-type">
+                        <option value="rent">Rent/Mortgage</option>
+                        <option value="utilities">Utilities</option>
+                        <option value="groceries">Groceries</option>
+                        <option value="transportation">Transportation</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="number" id="expense-amount" placeholder="Amount" required min="0" step="0.01">
+                    <button type="submit">Done</button>
+                </form>
+                <div class="chart-simple" id="expense-pie-chart">
+                    <p>Pie chart for expenses</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="savings-simple">
+            <p>Savings per month: $<span id="savings">0.00</span></p>
+        </div>
+    </div>
+</body>
+</html> 

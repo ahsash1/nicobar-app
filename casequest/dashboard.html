@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="dashboard.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="todo.html">To-Do List</a></li>
+            <li><a href="visualization.html">Visualization</a></li>
+            <li><a href="income_expenses.html">Income/Expenses</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Dashboard</h2>
+        
+        <div class="welcome-section">
+            <h3 id="welcome-message">Welcome!</h3>
+        </div>
+        
+        <div class="profile-section">
+            <h3>Profile</h3>
+            <div class="profile-content">
+                <div class="profile-picture">
+                    <img id="profile-image" src="https://via.placeholder.com/150/cccccc/666666?text=Profile" alt="Profile Picture">
+                </div>
+                <div class="profile-upload">
+                    <input type="file" id="profile-upload-input" accept="image/*" style="display: none;">
+                    <button id="upload-button">Upload Profile Picture</button>
+                    <button id="remove-button" style="display: none;">Remove Picture</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="points-section">
+            <div class="medal">
+                <img id="medal-image" src="" alt="Medal Image">
+            </div>
+            <div>
+                <p>Total Points: <span id="total-points">0</span></p>
+                <p id="medal-level"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
